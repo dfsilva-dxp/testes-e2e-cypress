@@ -19,10 +19,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - run: yarn ci
 
       - name: Testes
-        run: npm test
+        run: yarn test
 
       - name: Monitor de cobertura de testes
         run: npm run test:coverage
